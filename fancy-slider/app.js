@@ -74,6 +74,8 @@ const createSlider = () => {
   const duration = document.getElementById('duration').value || 1000;
   if(duration < 1000){
     alert("Put positive and valid duration (1000 = 1sec)")
+    document.querySelector('.main').style.display = 'none';
+    return;
   }
     sliders.forEach(slide => {
       let item = document.createElement('div')
